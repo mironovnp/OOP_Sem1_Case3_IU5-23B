@@ -15,11 +15,17 @@ int main() {
     StudentGroup group;
 
     // Создаем объекты студентов.
+
     Student s1("Nikita Mironov", {});
     Student s2("Andrey Korotenko", {});
     Student s3("Alexander Fedyaev", {});
     Student s4("Ivan Nemtsov", {});
     Student s5("Gayana Akhmetzyanova", {});
+
+    // Работа со студентом по умолчанию
+    Student s();
+    s.setName("EBLAN")
+    s.printInfo();
 
     // Добавляем оценки
     s1.addGrade(5); s1.addGrade(4); s1.addGrade(5);
