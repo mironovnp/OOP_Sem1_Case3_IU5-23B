@@ -18,10 +18,11 @@ class Student{
         Student(const string& name, const vector<int>& initGrades);
 
         //Методы класса
+        void setName(string name);
         void addGrade(int grade);
         double calculateAverage() const;
         void printInfo() const;
 
         //Геттер
-        int getID() const {return studentId;}
+        int getId() const {return studentId;}
 };

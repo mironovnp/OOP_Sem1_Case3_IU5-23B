@@ -8,6 +8,11 @@ Student::Student() : studentId(nextIdCount++), name("Unknown") {}
 Student::Student(const string& name, const vector<int>& initGrades) : studentId(nextIdCount++), name(name), grades(initGrades) {}
 
 //Определение методов
+void Student::setName(string newName){
+    name = newName;
+    cout << "Записано новое имя: " << name << endl;
+}
+
 void Student::addGrade(int grade){
     if (grade > 0 && grade < 5){
         grades.push_back(grade);
@@ -44,5 +49,5 @@ void Student::printInfo() const{
         strcount++;
     }
 
-    cout << "Средний балл студента: " << calculateAverage << endl;
+    cout << "Средний балл студента: " << calculateAverage() << endl;
 }
