@@ -23,8 +23,8 @@ int main() {
     Student s5("Gayana Akhmetzyanova", {});
 
     // Работа со студентом по умолчанию
-    Student s();
-    s.setName("EBLAN")
+    Student s;
+    s.setName("EBLAN");
     s.printInfo();
 
     // Добавляем оценки
@@ -53,7 +53,7 @@ int main() {
     // Тестируем поиск студента по ID (например, 4)
     std::cout << "\nSearching for student with ID (4)...\n";
     Student found = group.findStud(4);
-    if (found.getID() != 0) { // Проверка, если ID найден
+    if (found.getId() != 0) { // Проверка, если ID найден
         found.printInfo();
     }
 
