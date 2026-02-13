@@ -1,8 +1,8 @@
 #include <iostream>
 #include <string>
 #include <vector>
-#include "Student.h"
-#include "StudentGroup.h"
+#include "../include/Student.h"
+#include "../include/StudentGroup.h"
 
 int main() {
 
