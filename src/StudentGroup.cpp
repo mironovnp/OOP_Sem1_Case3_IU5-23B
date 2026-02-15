@@ -6,20 +6,24 @@ void StudentGroup::addStudent(const Student& stud) {
 }
 
 Student StudentGroup::findStud (const int idi_nxi) const {
-    for (int i=0; i<group.size(); i++) {
-        Student stud = group[i];
-        if (stud.getId()==idi_nxi) {
+    for (const auto& stud : group) {
+        if (stud.getId() == idi_nxi) {
             return stud;
         }
     }
+    return Student(); // Возвращаем дефолтного студента, если не нашли
 }
 
 double StudentGroup::calcAv() const {
-    double avg=0; 
-    for (int i=0; i<group.size(); i++) {
-        Student stud = group[i];
-        avg+=stud.calculateAverage();  
+    //Проверка на пустую группу
+    if (group.empty()) {
+        return 0.0;
     }
-    avg/=group.size();
-    return avg;
+
+    double avg = 0;
+    for (size_t i = 0; i < group.size(); i++) {
+        const Student& stud = group[i];
+        avg += stud.calculateAverage();
+    }
+    return avg / group.size();
 }

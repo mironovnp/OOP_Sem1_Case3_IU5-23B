@@ -14,7 +14,7 @@ void Student::setName(string newName){
 }
 
 void Student::addGrade(int grade){
-    if (grade > 0 && grade < 5){
+    if (grade > 0 && grade <= 5){
         grades.push_back(grade);
     }
     else if(grade <= 0){

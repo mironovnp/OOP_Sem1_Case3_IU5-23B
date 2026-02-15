@@ -14,7 +14,14 @@ int main() {
     // Создаем группу.
     StudentGroup group;
 
-    // Создаем объекты студентов.
+    // Работа со студентом по умолчанию
+    std::cout << "Проверка работы конструктора по умолчанию:" << std::endl;
+    Student s;
+    std::cout << "Изменение имени студента..." << std::endl;
+    s.setName("test_name");
+    s.printInfo();
+
+    //Создаем объекты студентов.
 
     Student s1("Nikita Mironov", {});
     Student s2("Andrey Korotenko", {});
@@ -22,19 +29,14 @@ int main() {
     Student s4("Ivan Nemtsov", {});
     Student s5("Gayana Akhmetzyanova", {});
 
-    // Работа со студентом по умолчанию
-    Student s;
-    s.setName("EBLAN");
-    s.printInfo();
-
-    // Добавляем оценки
+    //Добавляем оценки
     s1.addGrade(5); s1.addGrade(4); s1.addGrade(5);
     s2.addGrade(4); s2.addGrade(4); s2.addGrade(3);
     s3.addGrade(5); s3.addGrade(5); s3.addGrade(4);
     s4.addGrade(3); s4.addGrade(4); s4.addGrade(3);
     s5.addGrade(5); s5.addGrade(5); s5.addGrade(5);
 
-    std::cout << "Adding students to group...\n";
+    std::cout << "\nAdding students to group...\n";
     group.addStudent(s1);
     group.addStudent(s2);
     group.addStudent(s3);

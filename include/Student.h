@@ -1,3 +1,6 @@
+#ifndef STUDENT_H
+#define STUDENT_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -26,3 +29,5 @@ class Student{
         //Геттер
         int getId() const {return studentId;}
 };
+
+#endif
